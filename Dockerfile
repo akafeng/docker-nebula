@@ -14,7 +14,7 @@ RUN set -eux \
     \
     && wget -O nebula.tar.gz ${NEBULA_URL} \
     && echo "${NEBULA_CHECKSUM} nebula.tar.gz" | sha256sum -c \
-    && tar -xzC /usr/local/bin/ -f nebula.tar.gz \
+    && tar -xzvC /usr/local/bin/ -f nebula.tar.gz \
     && rm -rf nebula.tar.gz \
     && nebula -version
 
