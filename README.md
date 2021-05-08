@@ -1,5 +1,7 @@
 <h1 align="center">Nebula</h1>
 
+<p align="center">A scalable overlay networking tool with a focus on performance, simplicity and security.</p>
+
 <p align="center">
     <a href="https://hub.docker.com/r/akafeng/nebula">Docker Hub</a> ·
     <a href="https://github.com/slackhq/nebula">Project Source</a>
