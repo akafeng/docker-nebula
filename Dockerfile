@@ -11,6 +11,7 @@ RUN set -eux \
     && apt-get install -qyy --no-install-recommends --no-install-suggests \
         ca-certificates \
         wget \
+    && rm -rf /var/lib/apt/lists/* /var/log/* \
     \
     && wget -O nebula.tar.gz ${NEBULA_URL} \
     && echo "${NEBULA_CHECKSUM} nebula.tar.gz" | sha256sum -c \
