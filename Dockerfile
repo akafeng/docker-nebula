@@ -2,8 +2,8 @@ FROM debian:buster-slim AS builder
 
 LABEL maintainer="akafeng <i@sjy.im>"
 
-ARG NEBULA_VERSION="1.3.0"
-ARG NEBULA_CHECKSUM="a82e0c6ab14dd2c5af921ae3051a88493ac053a5ece77eaa9e87a0543fd3d89b"
+ARG NEBULA_VERSION="1.4.0"
+ARG NEBULA_CHECKSUM="d1ef37ca4d676f00df0ec83911cc2d9f1e70edc70651589210f9e97c68891b9b"
 ARG NEBULA_URL="https://github.com/slackhq/nebula/releases/download/v${NEBULA_VERSION}/nebula-linux-amd64.tar.gz"
 
 RUN set -eux \
