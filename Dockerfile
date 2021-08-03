@@ -2,7 +2,8 @@ FROM debian:buster-slim AS builder
 
 LABEL \
     org.opencontainers.image.title="nebula" \
-    org.opencontainers.image.authors="akafeng <i@sjy.im>"
+    org.opencontainers.image.authors="akafeng <i@sjy.im>" \
+    org.opencontainers.image.source="https://github.com/akafeng/docker-nebula"
 
 ARG NEBULA_VERSION="1.4.0"
 ARG NEBULA_CHECKSUM="d1ef37ca4d676f00df0ec83911cc2d9f1e70edc70651589210f9e97c68891b9b"
@@ -27,7 +28,8 @@ FROM debian:buster-slim
 
 LABEL \
     org.opencontainers.image.title="nebula" \
-    org.opencontainers.image.authors="akafeng <i@sjy.im>"
+    org.opencontainers.image.authors="akafeng <i@sjy.im>" \
+    org.opencontainers.image.source="https://github.com/akafeng/docker-nebula"
 
 COPY --from=builder /usr/local/bin/ /usr/local/bin/
 
