@@ -1,6 +1,8 @@
 FROM debian:buster-slim AS builder
 
-LABEL maintainer="akafeng <i@sjy.im>"
+LABEL \
+    org.opencontainers.image.title="nebula" \
+    org.opencontainers.image.authors="akafeng <i@sjy.im>"
 
 ARG NEBULA_VERSION="1.4.0"
 ARG NEBULA_CHECKSUM="d1ef37ca4d676f00df0ec83911cc2d9f1e70edc70651589210f9e97c68891b9b"
@@ -15,7 +17,7 @@ RUN set -eux \
     \
     && wget -O nebula.tar.gz ${NEBULA_URL} \
     && echo "${NEBULA_CHECKSUM} nebula.tar.gz" | sha256sum -c \
-    && tar -xzvC /usr/local/bin/ -f nebula.tar.gz \
+    && tar -xzvf nebula.tar.gz -C /usr/local/bin/ \
     && rm -rf nebula.tar.gz \
     && nebula -version
 
@@ -23,7 +25,9 @@ RUN set -eux \
 
 FROM debian:buster-slim
 
-LABEL maintainer="akafeng <i@sjy.im>"
+LABEL \
+    org.opencontainers.image.title="nebula" \
+    org.opencontainers.image.authors="akafeng <i@sjy.im>"
 
 COPY --from=builder /usr/local/bin/ /usr/local/bin/
 

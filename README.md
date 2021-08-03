@@ -10,7 +10,6 @@
 <p align="center">
     <img src="https://img.shields.io/docker/v/akafeng/nebula?sort=semver" />
     <img src="https://img.shields.io/docker/pulls/akafeng/nebula" />
-    <img src="https://img.shields.io/microbadger/layers/akafeng/nebula" />
     <img src="https://img.shields.io/docker/image-size/akafeng/nebula??sort=semver" />
 </p>
 
